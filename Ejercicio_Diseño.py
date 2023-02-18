@@ -27,8 +27,8 @@ class Robot:
 # This was made by Fernando Arribas
 
 class RobotAero(Robot):
-    def _init_(self, name, position, size, sensors, speed, wingspan):
-        super()._init_(name, position, size, sensors, speed)
+    def __init__(self, name, position, size, sensors, speed, wingspan):
+        super().__init__(name, position, size, sensors, speed)
         self.wingspan = wingspan
     
     def fly(self, altitude):
@@ -39,8 +39,8 @@ class RobotAero(Robot):
         print(f"Wingspan: {self.wingspan}")
         
 class RobotTerra(Robot):
-    def _init_(self, name, position, size, sensors, speed, wheels):
-        super()._init_(name, position, size, sensors, speed)
+    def __init__(self, name, position, size, sensors, speed, wheels):
+        super().__init__(name, position, size, sensors, speed)
         self.wheels = wheels
     
     def move(self, new_position):
