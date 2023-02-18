@@ -3,9 +3,32 @@
 
 
 
+# This was made by Fernando Arribas
 
-
-
+class RobotAero(Robot):
+    def _init_(self, name, position, size, sensors, speed, wingspan):
+        super()._init_(name, position, size, sensors, speed)
+        self.wingspan = wingspan
+    
+    def fly(self, altitude):
+        print(f"{self.name} is flying at altitude {altitude}.")
+        
+    def display_info(self):
+        super().display_info()
+        print(f"Wingspan: {self.wingspan}")
+        
+class RobotTerra(Robot):
+    def _init_(self, name, position, size, sensors, speed, wheels):
+        super()._init_(name, position, size, sensors, speed)
+        self.wheels = wheels
+    
+    def move(self, new_position):
+        print(f"{self.name} is moving on wheels to {new_position}.")
+        self.position = new_position
+        
+    def display_info(self):
+        super().display_info()
+        print(f"Wheels: {self.wheels}")
 
 #this was made by Pablo Moreno
 
