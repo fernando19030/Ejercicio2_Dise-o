@@ -1,4 +1,25 @@
-
+# This was made by Josue Salazar
+class Robot:
+    def __init__(self, name, position, size, sensors, speed):
+        self.name = name
+        self.position = position
+        self.size = size
+        self.sensors = sensors
+        self.speed = speed
+    
+    def move(self, new_position):
+        self.position = new_position
+        print(f"{self.name} has moved to {new_position}.")
+        
+    def sense(self):
+        print(f"{self.name} is sensing with {self.sensors} sensors.")
+        
+    def display_info(self):
+        print(f"Name: {self.name}")
+        print(f"Position: {self.position}")
+        print(f"Size: {self.size}")
+        print(f"Sensors: {self.sensors}")
+        print(f"Speed: {self.speed}")
 
 
 
